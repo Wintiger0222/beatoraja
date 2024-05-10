@@ -218,10 +218,10 @@ public class PlayModeConfig {
         public void setKeyAssign(Mode mode, boolean enable) {
             switch (mode) {
                 case GENERIC_4K:
-                    keys = new int[] { Keys.Z, Keys.S, Keys.D, Keys.C};
+                    keys = new int[] { Keys.S, Keys.D, Keys.L, Keys.SEMICOLON};
                     break;
                 case GENERIC_6K:
-                    keys = new int[] { Keys.Z, Keys.S, Keys.X, Keys.C, Keys.F, Keys.V};
+                    keys = new int[] { Keys.Z, Keys.S, Keys.D, Keys.L, Keys.SEMICOLON, APOSTROPHE};
                     break;
                 case BEAT_5K:
                     keys = new int[] { Keys.Z, Keys.S, Keys.X, Keys.D, Keys.C, Keys.SHIFT_LEFT,

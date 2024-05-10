@@ -34,7 +34,7 @@ public class KeyConfiguration extends MainState {
 
 	private BitmapFont titlefont;
 
-	private static final String[] MODE = { "5 KEYS", "7 KEYS", "9 KEYS", "10 KEYS", "14 KEYS", "24 KEYS", "24 KEYS DOUBLE", "4 KEYS", "6 KEYS" };
+	private static final String[] MODE = { "5 KEYS", "7 KEYS", "9 KEYS", "10 KEYS", "14 KEYS", "24 KEYS", "24 KEYS DOUBLE", "GENERIC 4 KEYS", "GENERIC 6 KEYS" };
 	private static final Mode[] MODE_HINT = { Mode.BEAT_5K,Mode.BEAT_7K, Mode.POPN_9K, Mode.BEAT_10K, Mode.BEAT_14K, Mode.KEYBOARD_24K,
 			Mode.KEYBOARD_24K_DOUBLE, Mode.GENERIC_4K, Mode.GENERIC_6K };
 
