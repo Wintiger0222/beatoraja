@@ -217,6 +217,12 @@ public class PlayModeConfig {
 
         public void setKeyAssign(Mode mode, boolean enable) {
             switch (mode) {
+                case GENERIC_4K:
+                    keys = new int[] { Keys.Z, Keys.S, Keys.D, Keys.C};
+                    break;
+                case GENERIC_6K:
+                    keys = new int[] { Keys.Z, Keys.S, Keys.X, Keys.C, Keys.F, Keys.V};
+                    break;
                 case BEAT_5K:
                     keys = new int[] { Keys.Z, Keys.S, Keys.X, Keys.D, Keys.C, Keys.SHIFT_LEFT,
                             Keys.CONTROL_LEFT };
@@ -328,6 +334,12 @@ public class PlayModeConfig {
 
         public void setKeyAssign(Mode mode) {
             switch (mode) {
+                case GENERIC_4K:
+                    keys = new int[4];
+                    break;
+                case GENERIC_6K:
+                    keys = new int[6];
+                    break;
                 case BEAT_5K:
                     keys = new int[7];
                     break;
@@ -514,6 +526,12 @@ public class PlayModeConfig {
         	final ControllerConfig con = IIDX_PS2;
             if(player == 0) {
                 switch (mode) {
+                    case GENERIC_4K:
+                        keys = new int[]{ con.keys[0], con.keys[1], con.keys[3], con.keys[4]};
+                        break;
+                    case GENERIC_6K:
+                        keys = new int[]{ con.keys[0], con.keys[1], con.keys[2], con.keys[4],con.keys[5], con.keys[6]};
+                        break;
                     case BEAT_5K:
                         keys = new int[]{ con.keys[0], con.keys[1], con.keys[2], con.keys[3], con.keys[4],con.keys[7], con.keys[8]};
                         break;
@@ -539,6 +557,8 @@ public class PlayModeConfig {
                 }
             } else {
                 switch (mode) {
+                    case GENERIC_4K:
+                    case GENERIC_6K:
                     case BEAT_5K:
                     case BEAT_7K:
                     case POPN_5K:
@@ -707,6 +727,24 @@ public class PlayModeConfig {
 
         public void setKeyAssign(Mode mode, boolean enable) {
             switch (mode) {
+                case GENERIC_4K:
+                    // 4keys
+                    keys = new Input[4];
+                    for (int i = 0; i < 4; i++) {
+                        keys[i] = new Input(Input.Type.NOTE, 52 + i);
+                    }
+                    start = new Input(Input.Type.NOTE, 47);
+                    select = new Input(Input.Type.NOTE, 48);
+                    break;
+                case GENERIC_6K:
+                    // 6keys
+                    keys = new Input[6];
+                    for (int i = 0; i < 6; i++) {
+                        keys[i] = new Input(Input.Type.NOTE, 52 + i);
+                    }
+                    start = new Input(Input.Type.NOTE, 47);
+                    select = new Input(Input.Type.NOTE, 48);
+                    break;
                 case BEAT_5K:
                     // 5keys
                     keys = new Input[7];

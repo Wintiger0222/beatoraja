@@ -187,6 +187,10 @@ public class PlayerConfig {
 	private SkinConfig[] skin = new SkinConfig[SkinType.getMaxSkinTypeID() + 1];
 	private SkinConfig[] skinHistory;
 
+	private PlayModeConfig modeG4 = new PlayModeConfig(Mode.GENERIC_4K);
+
+	private PlayModeConfig modeG6 = new PlayModeConfig(Mode.GENERIC_6K);
+
 	private PlayModeConfig mode5 = new PlayModeConfig(Mode.BEAT_5K);
 
 	private PlayModeConfig mode7 = new PlayModeConfig(Mode.BEAT_7K);
@@ -373,6 +377,10 @@ public class PlayerConfig {
 
 	public PlayModeConfig getPlayConfig(Mode modeId) {
 		switch (modeId != null ? modeId : Mode.BEAT_7K) {
+		case GENERIC_4K:
+			return getModeG4();
+		case GENERIC_6K:
+			return getModeG6();
 		case BEAT_5K:
 			return getMode5();
 		case BEAT_7K:
@@ -411,6 +419,22 @@ public class PlayerConfig {
 		default:
 			return getMode7();
 		}
+	}
+
+	public PlayModeConfig getModeG4() {
+		return modeG4;
+	}
+
+	public void setMode4(PlayModeConfig modeG4) {
+		this.modeG4 = modeG4;
+	}
+
+	public PlayModeConfig getModeG6() {
+		return modeG6;
+	}
+
+	public void setModeG6(PlayModeConfig modeG6) {
+		this.modeG6 = modeG6;
 	}
 
 	public PlayModeConfig getMode5() {
@@ -786,6 +810,12 @@ public class PlayerConfig {
 			skin[i].validate();
 		}
 
+		if(modeG4 == null) {
+			modeG4 = new PlayModeConfig(Mode.GENERIC_4K);
+		}
+		if(modeG6 == null) {
+			modeG6 = new PlayModeConfig(Mode.GENERIC_6K);
+		}
 		if(mode5 == null) {
 			mode5 = new PlayModeConfig(Mode.BEAT_5K);
 		}

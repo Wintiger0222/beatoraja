@@ -36,6 +36,20 @@ public class LaneProperty {
 
 	public LaneProperty(Mode mode) {
 		switch (mode) {
+		case GENERIC_4K:
+			keyToLane = new int[] { 0, 1, 2, 3 };
+			laneToKey = new int[][] { {0}, {1}, {2}, {3} };
+			laneToScratch = new int[] { -1, -1, -1, -1 };
+			laneToSkinOffset = new int[] { 0, 1, 2, 3 };
+			scratchToKey = new int[][] {};
+			break;
+		case GENERIC_6K:
+			keyToLane = new int[] { 0, 1, 2, 3, 4, 5 };
+			laneToKey = new int[][] { {0}, {1}, {2}, {3}, {4}, {5} };
+			laneToScratch = new int[] { -1, -1, -1, -1, -1, -1 };
+			laneToSkinOffset = new int[] { 0, 1, 2, 3, 4, 5 };
+			scratchToKey = new int[][] {};
+			break;
 		case BEAT_5K:
 			keyToLane = new int[] { 0, 1, 2, 3, 4, 5, 5 };
 			laneToKey = new int[][] { {0}, {1}, {2}, {3}, {4}, {5,6} };

@@ -153,6 +153,8 @@ public class JSONSkinLoader extends SkinLoader {
 
 				int offsetLengthAddition = 0;
 				switch (header.getSkinType()) {
+					case PLAY_G4KEYS:
+					case PLAY_G6KEYS:
 					case PLAY_5KEYS:
 					case PLAY_7KEYS:
 					case PLAY_9KEYS:
@@ -176,6 +178,8 @@ public class JSONSkinLoader extends SkinLoader {
 					}
 				}
 				switch (header.getSkinType()) {
+					case PLAY_G4KEYS:
+					case PLAY_G6KEYS:
 					case PLAY_5KEYS:
 					case PLAY_7KEYS:
 					case PLAY_9KEYS:
@@ -274,6 +278,8 @@ public class JSONSkinLoader extends SkinLoader {
 			case MUSIC_SELECT:
 				objectLoader = new JsonSelectSkinObjectLoader(this);
 				break;
+			case PLAY_G4KEYS:
+			case PLAY_G6KEYS:
 			case PLAY_5KEYS:
 			case PLAY_7KEYS:
 			case PLAY_9KEYS:

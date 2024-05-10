@@ -395,6 +395,8 @@ public class BooleanPropertyFactory {
 		chart_14key(162, new SongDataBooleanProperty((model) -> (model.getMode() == Mode.BEAT_14K.id))),
 		chart_10key(163, new SongDataBooleanProperty((model) -> (model.getMode() == Mode.BEAT_10K.id))),
 		chart_9key(164, new SongDataBooleanProperty((model) -> (model.getMode() == Mode.POPN_9K.id))),
+		chart_G4key(1165, new SongDataBooleanProperty((model) -> (model.getMode() == Mode.GENERIC_4K.id))),
+		chart_G6key(1166, new SongDataBooleanProperty((model) -> (model.getMode() == Mode.GENERIC_6K.id))),
 		
 		select_bar_failed(OPTION_SELECT_BAR_FAILED, new SelectedBarClearDrawCondition(Failed)),
 		select_bar_assist_easy(OPTION_SELECT_BAR_ASSIST_EASY_CLEARED, new SelectedBarClearDrawCondition(AssistEasy)),

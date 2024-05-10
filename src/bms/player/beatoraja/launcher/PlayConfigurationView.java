@@ -814,7 +814,9 @@ public class PlayConfigurationView implements Initializable {
 		BEAT_14K("14KEYS"),
 		POPN_9K("9KEYS"),
 		KEYBOARD_24K("24KEYS"),
-		KEYBOARD_24K_DOUBLE("24KEYS DOUBLE");
+		KEYBOARD_24K_DOUBLE("24KEYS DOUBLE"),
+		GENERIC_4K("4KEYS"),
+		GENERIC_6K("6KEYS");
 
 		public final String name;
 

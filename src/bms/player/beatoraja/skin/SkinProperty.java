@@ -658,6 +658,8 @@ public class SkinProperty {
 	public static final int OPTION_9KEYSONG = 164;
 	public static final int OPTION_24KEYSONG = 1160;
 	public static final int OPTION_24KEYDPSONG = 1161;
+	public static final int OPTION_G4KEYSONG = 1165;
+	public static final int OPTION_G6KEYSONG = 1166;
 
 	public static final int OPTION_NO_BGA = 170;
 	public static final int OPTION_BGA = 171;

@@ -75,6 +75,14 @@ public class ControlInputProcessor {
 			processStart = () -> processStart5key();
 			processSelect = () -> processSelect5key();
 			break;
+		case GENERIC_4K:
+			processStart = () -> processStartG4key();
+			processSelect = () -> processSelectG4key();
+			break;
+		case GENERIC_6K:
+			processStart = () -> processStartG6key();
+			processSelect = () -> processSelectG6key();
+			break;
 		default:
 			processStart = () -> processStart7key();
 			processSelect = () -> processSelect7key();
@@ -387,6 +395,100 @@ public class ControlInputProcessor {
 	}
 
 	void processSelect9key() {
+		final LaneRenderer lanerender = player.getLanerender();
+		final BMSPlayerInputProcessor input = player.main.getInputProcessor();
+
+		// change duration by SELECT + Keys
+		for(int i = 0; i <= 8; i++) {
+			if (i % 2 == 1 && input.getKeyState(i)) {
+				if(!hschanged[i]) {
+					lanerender.setGreenValue(lanerender.getGreenValue() -1);
+					hschanged[i] = true;
+				}
+			} else if (i % 2 == 0 && input.getKeyState(i))  {
+				if(!hschanged[i]) {
+					lanerender.setGreenValue(lanerender.getGreenValue() +1);
+					hschanged[i] = true;
+				}
+			} else {
+				hschanged[i] = false;
+			}
+		}
+	}
+
+	void processStartG4key() {
+		final LaneRenderer lanerender = player.getLanerender();
+		final BMSPlayerInputProcessor input = player.main.getInputProcessor();
+
+		// change hi speed by START + Keys(0-6)
+		for(int i = 0; i <= 6; i++) {
+			if (i % 2 == 1 && input.getKeyState(i)) {
+				if(!hschanged[i]) {
+					lanerender.changeHispeed(true);
+					hschanged[i] = true;
+				}
+			} else if (i % 2 == 0 && input.getKeyState(i))  {
+				if(!hschanged[i]) {
+					lanerender.changeHispeed(false);
+					hschanged[i] = true;
+				}
+			} else {
+				hschanged[i] = false;
+			}
+		}
+
+		// move lane cover by START + Keys(7-8)
+		coverValueChange(8, -1, 7, -1);
+	}
+
+	void processSelectG4key() {
+		final LaneRenderer lanerender = player.getLanerender();
+		final BMSPlayerInputProcessor input = player.main.getInputProcessor();
+
+		// change duration by SELECT + Keys
+		for(int i = 0; i <= 8; i++) {
+			if (i % 2 == 1 && input.getKeyState(i)) {
+				if(!hschanged[i]) {
+					lanerender.setGreenValue(lanerender.getGreenValue() -1);
+					hschanged[i] = true;
+				}
+			} else if (i % 2 == 0 && input.getKeyState(i))  {
+				if(!hschanged[i]) {
+					lanerender.setGreenValue(lanerender.getGreenValue() +1);
+					hschanged[i] = true;
+				}
+			} else {
+				hschanged[i] = false;
+			}
+		}
+	}
+
+	void processStartG6key() {
+		final LaneRenderer lanerender = player.getLanerender();
+		final BMSPlayerInputProcessor input = player.main.getInputProcessor();
+
+		// change hi speed by START + Keys(0-6)
+		for(int i = 0; i <= 6; i++) {
+			if (i % 2 == 1 && input.getKeyState(i)) {
+				if(!hschanged[i]) {
+					lanerender.changeHispeed(true);
+					hschanged[i] = true;
+				}
+			} else if (i % 2 == 0 && input.getKeyState(i))  {
+				if(!hschanged[i]) {
+					lanerender.changeHispeed(false);
+					hschanged[i] = true;
+				}
+			} else {
+				hschanged[i] = false;
+			}
+		}
+
+		// move lane cover by START + Keys(7-8)
+		coverValueChange(8, -1, 7, -1);
+	}
+
+	void processSelectG6key() {
 		final LaneRenderer lanerender = player.getLanerender();
 		final BMSPlayerInputProcessor input = player.main.getInputProcessor();
 

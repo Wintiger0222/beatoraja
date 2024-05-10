@@ -15,6 +15,9 @@ public enum BMSPlayerRule {
 	Beatoraja_9(GaugeProperty.PMS, JudgeProperty.PMS, Mode.POPN_5K, Mode.POPN_9K),
 	Beatoraja_24(GaugeProperty.KEYBOARD, JudgeProperty.KEYBOARD, Mode.KEYBOARD_24K, Mode.KEYBOARD_24K_DOUBLE),
 	Beatoraja_Other(GaugeProperty.SEVENKEYS, JudgeProperty.SEVENKEYS),
+	
+	Beatoraja_G4(GaugeProperty.SEVENKEYS, JudgeProperty.SEVENKEYS, Mode.GENERIC_4K, Mode.GENERIC_4K),
+	Beatoraja_G6(GaugeProperty.SEVENKEYS, JudgeProperty.SEVENKEYS, Mode.GENERIC_6K, Mode.GENERIC_6K),
 
 	LR2(GaugeProperty.LR2, JudgeProperty.SEVENKEYS),
 

@@ -483,6 +483,8 @@ public class Skin {
 		SkinOffset offsetAll = null;
 		if(state instanceof BMSPlayer) {
 			switch(((BMSPlayer)state).getSkinType()) {
+			case PLAY_G4KEYS:
+			case PLAY_G6KEYS:
 			case PLAY_5KEYS:
 			case PLAY_7KEYS:
 			case PLAY_9KEYS:
